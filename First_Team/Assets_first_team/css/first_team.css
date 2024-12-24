@@ -739,14 +739,14 @@ body {
   font-weight: bold;
   font-family: "Roboto Slab";
   color: #fff;
-  opacity: 0.5;
+  opacity: 0.7;
   transition: all 0.5s ease;
 }
 
 .play_info {
   transition: all 0.5s ease;
   position: absolute; /*Định vị theo vị trí của "player_item"*/
-  bottom: -60%;
+  bottom: -195px;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
@@ -758,7 +758,7 @@ body {
 
 /* Box HLV */
 .coaching.coaching {
-  bottom: -10%;
+  bottom: -35px;
 }
 /* Player_info-top */
 .player_name {
@@ -843,11 +843,11 @@ body {
   opacity: 0.9;
 }
 .player_item:hover .play_info {
-  bottom: -24%;
+  bottom: -90px;
   background-color: rgba(0, 0, 0, 0.4);
 }
 /* chỉ box HLV */
 .player_item:hover .play_info.coaching {
-  bottom: -10%;
+  bottom: -35px;
   background-color: rgba(0, 0, 0, 0.4);
 }
