@@ -341,7 +341,7 @@ body {
   font-weight: 300;
 }
 
-/* style đội hình*/
+/*================= style đội hình =================*/
 
 /* Sân bóng */
 .football-field {
@@ -662,4 +662,192 @@ body {
 .RWF {
   bottom: 3%;
   right: 20%;
+}
+
+/*================= Toàn đội =================*/
+/* thanh menu */
+.squad_team {
+  margin-top: 50px;
+}
+.squad_menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.squad_item {
+  width: 10%;
+  min-width: 10%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  text-align: center;
+}
+.squad_item-text {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #000;
+  text-align: center;
+  padding: 10px 0;
+  background-color: #ededec;
+  border-radius: 3px;
+  transition: all 0.8s ease;
+}
+
+.squad_item:hover .squad_item-text {
+  background-color: #14109f;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+/* box cầu thủ */
+.position_box {
+  margin: 70px 0;
+}
+.position_title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: "Oswald";
+}
+
+.player_list {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2%;
+}
+
+.player_item {
+  margin-top: 30px;
+  position: relative;
+  width: 30%;
+  height: 50vh;
+  max-width: 30%;
+  min-width: 15%;
+  overflow: hidden;
+}
+.player_img {
+  width: 100%;
+}
+.play_number {
+  position: absolute; /*Định vị theo vị trí của "player_item"*/
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 8rem;
+  font-weight: bold;
+  font-family: "Roboto Slab";
+  color: #fff;
+  opacity: 0.5;
+  transition: all 0.5s ease;
+}
+
+.play_info {
+  transition: all 0.5s ease;
+  position: absolute; /*Định vị theo vị trí của "player_item"*/
+  bottom: -60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 5px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Box HLV */
+.coaching.coaching {
+  bottom: -10%;
+}
+/* Player_info-top */
+.player_name {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+  -webkit-line-clamp: 1;
+}
+.player_first-name {
+  font-size: 1.3rem;
+  font-weight: 200;
+  font-family: "roboto slab";
+  color: #fff;
+  line-height: 1;
+}
+.player_last-name {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "roboto slab";
+  color: #fff;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.player_position {
+  margin-top: 10px;
+  color: #fff;
+  letter-spacing: 0.5px;
+  font-family: "Oswald";
+  font-weight: bold;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+/* player_info-bottom */
+.player_info-bottom {
+  padding-top: 5px;
+  border-top: 1px solid #fff;
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.player_info-item {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.player_info-title {
+  text-align: center;
+  font-size: 0.6rem;
+  color: #fff;
+  text-transform: uppercase;
+  -webkit-line-clamp: 1;
+}
+.total_overall {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+.season_title {
+  text-align: center;
+  font-size: 0.5rem;
+  font-weight: 200;
+  color: #e3dada;
+  -webkit-line-clamp: 1;
+}
+.total_yearly {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--main-color);
+}
+
+/* Hiệu ứng khi hover thẻ cầu thủ */
+.player_item:hover .play_number {
+  top: 15%;
+  left: 18%;
+  opacity: 0.9;
+}
+.player_item:hover .play_info {
+  bottom: -24%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+/* chỉ box HLV */
+.player_item:hover .play_info.coaching {
+  bottom: -10%;
+  background-color: rgba(0, 0, 0, 0.4);
 }
