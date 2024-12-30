@@ -30,6 +30,7 @@ li {
   -webkit-box-orient: vertical;
   overflow: hidden;
   white-space: nowrap;
+  -webkit-line-clamp: 1;
 }
 
 body {
@@ -295,8 +296,6 @@ body {
   background-size: cover; /* Tùy chọn: Để ảnh phủ đầy khu vực */
   background-repeat: no-repeat; /* Tùy chọn: Không lặp ảnh */
   background-position: center;
-  background-color: rgba(0, 0, 0, 0.7);
-
   width: 100%;
   height: 20vh;
 }
@@ -344,7 +343,7 @@ body {
 /*================= style đội hình =================*/
 
 /* Sân bóng */
-.football-field {
+.players .football-field {
   width: 80vw; /* Chiều rộng sân */
   height: 90vh; /* Chiều dài sân */
   background-color: #007a33; /* Màu cỏ xanh */
@@ -355,7 +354,7 @@ body {
 }
 
 /* Đường giữa sân */
-.half-line {
+.players .half-line {
   width: 2px; /* Độ dày đường giữa sân */
   height: 100%; /* Trải dài từ trên xuống dưới */
   background-color: white; /* Màu trắng cho đường giữa */
@@ -366,7 +365,7 @@ body {
 }
 
 /* Vòng tròn giữa sân */
-.center-circle {
+.players .center-circle {
   width: 10vw;
   height: 10vw;
   border: 2px solid white;
@@ -377,7 +376,7 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.center-dot {
+.players .center-dot {
   width: 10px;
   height: 10px;
   background-color: white;
@@ -398,18 +397,18 @@ body {
   transform: translateY(-50%);
 }
 
-.left-penalty {
+.players .left-penalty {
   border-left: none;
   left: 0;
 }
 
-.right-penalty {
+.players .right-penalty {
   border-right: none;
   right: 0;
 }
 
 /* Khu vực cầu môn */
-.goal-area {
+.players .goal-area {
   width: 5vw;
   height: 17vh;
   border: 2px solid white;
@@ -419,18 +418,18 @@ body {
   transform: translateY(-50%);
 }
 
-.left-goal {
+.players .left-goal {
   border-left: none;
   left: 0;
 }
 
-.right-goal {
+.players .right-goal {
   border-right: none;
   right: 0;
 }
 
 /* Điểm penalty */
-.penalty-dot {
+.players .penalty-dot {
   width: 10px;
   height: 10px;
   background-color: white;
@@ -438,20 +437,20 @@ body {
   position: absolute;
 }
 
-.left-dot {
+.players .left-dot {
   left: 110px;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.right-dot {
+.players .right-dot {
   right: 110px;
   top: 50%;
   transform: translateY(-50%);
 }
 
 /* Vòng cung khu vực phạt đền */
-.penalty-arc {
+.players .penalty-arc {
   width: 60px;
   height: 60px;
   border: 2px 0px 2px 2px solid red;
@@ -460,7 +459,7 @@ body {
 }
 
 /* Cột góc */
-.corner {
+.players .corner {
   width: 50px;
   height: 50px;
   border: 2px solid white;
@@ -468,42 +467,42 @@ body {
   position: absolute;
 }
 
-.top-left {
+.players .top-left {
   top: 0;
   left: 0;
   transform: translate(-50%, -50%);
 }
 
-.top-right {
+.players .top-right {
   top: 0;
   right: 0;
   transform: translate(50%, -50%);
 }
 
-.bottom-left {
+.players .bottom-left {
   bottom: 0;
   left: 0;
   transform: translate(-50%, 50%);
 }
 
-.bottom-right {
+.players .bottom-right {
   bottom: 0;
   right: 0;
   transform: translate(50%, 50%);
 }
-.starting_lineup {
+.players .starting_lineup {
   position: relative;
 }
 
 /* Thẻ cầu thủ chính */
-.position {
+.players .position {
   font-size: 1rem;
   font-weight: bold;
   color: #fff;
   font-family: "roboto slab";
   letter-spacing: 2px;
 }
-.players_card {
+.players .players_card {
   position: absolute; /*Định vị vị chí theo "starting_lineup"*/
   width: 8vw;
   height: 20vh;
@@ -513,8 +512,8 @@ body {
   transform-origin: center; /*điểm bắt đầu chuyển động*/
 }
 
-.card_front,
-.card_back {
+.players .card_front,
+.players .card_back {
   position: absolute; /*Định vị theo vị trí của "players_card*/
   width: 100%;
   height: 100%;
@@ -525,10 +524,10 @@ body {
   transition: transform 1s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 /* mặt trước */
-.card_front {
+.players .card_front {
   transform: rotateY(0deg);
 }
-.card_img {
+.players .card_img {
   width: 100%;
   height: 100%;
   border-radius: 10px;
@@ -536,7 +535,7 @@ body {
 }
 
 /* mặt sau */
-.card_back {
+.players .card_back {
   padding: 10px;
   transform: rotateY(180deg);
   background-color: #680317;
@@ -546,14 +545,13 @@ body {
   align-items: center;
 }
 
-.player_name-box {
+.players .player_name-box {
   display: flex;
   align-items: center;
   gap: 3px;
-  -webkit-line-clamp: 1;
 }
 
-.first_name {
+.players .first_name {
   font-size: 0.1rem;
   font-weight: 100;
   font-family: "Oswald";
@@ -561,7 +559,7 @@ body {
   color: #fff;
 }
 
-.last_name {
+.players .last_name {
   font-size: 0.5rem;
   font-weight: 500;
   font-weight: bold;
@@ -570,7 +568,7 @@ body {
   color: #fff;
 }
 
-.player_number {
+.players .player_number {
   font-size: 3rem;
   font-weight: bold;
   font-family: "robot slab";
@@ -578,40 +576,40 @@ body {
   opacity: 0.7;
 }
 
-.player_country {
+.players .player_country {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 5px;
 }
 
-.country_flag {
+.players .country_flag {
   width: 25%;
 }
 
-.country_name {
+.players .country_name {
   color: #fff;
   font-size: 0.5rem;
   font-weight: 100;
   font-family: "roboto slab";
 }
 
-.players_card:hover {
+.players .players_card:hover {
   transform: scale(1.5);
 }
-.players_card:hover .card_front {
+.players .players_card:hover .card_front {
   transform: rotateY(180deg);
 }
 
-.players_card:hover .card_back {
+.players .players_card:hover .card_back {
   transform: rotateY(0deg);
 }
 
-.players_card:not(:hover) .card_front {
+.players .players_card:not(:hover) .card_front {
   transform: rotateY(0deg);
 }
 
-.players_card:not(:hover) .card_back {
+.players .players_card:not(:hover) .card_back {
   transform: rotateY(180deg);
 }
 
@@ -666,22 +664,22 @@ body {
 
 /*================= Toàn đội =================*/
 /* thanh menu */
-.squad_team {
+.players .squad_team {
   margin-top: 50px;
 }
-.squad_menu {
+.players .squad_menu {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
 }
-.squad_item {
+.players .squad_item {
   width: 10%;
   min-width: 10%;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   text-align: center;
 }
-.squad_item-text {
+.players .squad_item-text {
   display: block;
   width: 100%;
   height: 100%;
@@ -693,24 +691,24 @@ body {
   transition: all 0.8s ease;
 }
 
-.squad_item:hover .squad_item-text {
+.players .squad_item:hover .squad_item-text {
   background-color: #14109f;
   color: #fff;
   letter-spacing: 1px;
 }
 
 /* box cầu thủ */
-.position_box {
+.players .position_box {
   margin: 70px 0;
 }
-.position_title {
+.players .position_title {
   text-align: center;
   font-size: 2rem;
   font-weight: 500;
   font-family: "Oswald";
 }
 
-.player_list {
+.players .player_list {
   margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
@@ -718,7 +716,7 @@ body {
   gap: 2%;
 }
 
-.player_item {
+.players .player_item {
   margin-top: 30px;
   position: relative;
   width: 30%;
@@ -727,12 +725,12 @@ body {
   min-width: 15%;
   overflow: hidden;
 }
-.player_img {
+.players .player_img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.play_number {
+.players .play_number {
   position: absolute; /*Định vị theo vị trí của "player_item"*/
   top: 70%;
   left: 50%;
@@ -745,7 +743,7 @@ body {
   transition: all 0.5s ease;
 }
 
-.play_info {
+.players .play_info {
   transition: all 0.5s ease;
   position: absolute; /*Định vị theo vị trí của "player_item"*/
   bottom: -190px;
@@ -759,25 +757,24 @@ body {
 }
 
 /* Box HLV */
-.coaching.coaching {
+.players .coaching.coaching {
   bottom: -35px;
 }
 /* Player_info-top */
-.player_name {
+.players .player_name {
   display: flex;
   justify-content: center;
   align-items: flex-end;
   gap: 10px;
-  -webkit-line-clamp: 1;
 }
-.player_first-name {
+.players .player_first-name {
   font-size: 1.3rem;
   font-weight: 200;
   font-family: "roboto slab";
   color: #fff;
   line-height: 1;
 }
-.player_last-name {
+.players .player_last-name {
   font-size: 2rem;
   font-weight: bold;
   font-family: "roboto slab";
@@ -785,7 +782,7 @@ body {
   line-height: 1;
   text-transform: uppercase;
 }
-.player_position {
+.players .player_position {
   margin-top: 10px;
   color: #fff;
   letter-spacing: 0.5px;
@@ -796,7 +793,7 @@ body {
 }
 
 /* player_info-bottom */
-.player_info-bottom {
+.players .player_info-bottom {
   padding-top: 5px;
   border-top: 1px solid #fff;
   width: 100%;
@@ -805,33 +802,31 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.player_info-item {
+.players .player_info-item {
   width: 25%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.player_info-title {
+.players .player_info-title {
   text-align: center;
   font-size: 0.6rem;
   color: #fff;
   text-transform: uppercase;
-  -webkit-line-clamp: 1;
 }
-.total_overall {
+.players .total_overall {
   margin-top: 10px;
   font-size: 1.5rem;
   font-weight: bold;
   color: #fff;
 }
-.season_title {
+.players .season_title {
   text-align: center;
   font-size: 0.5rem;
   font-weight: 200;
   color: #e3dada;
-  -webkit-line-clamp: 1;
 }
-.total_yearly {
+.players .total_yearly {
   margin-top: 10px;
   font-size: 1rem;
   font-weight: bold;
@@ -839,17 +834,523 @@ body {
 }
 
 /* Hiệu ứng khi hover thẻ cầu thủ */
-.player_item:hover .play_number {
+.players .player_item:hover .play_number {
   top: 15%;
   left: 18%;
   opacity: 0.9;
 }
-.player_item:hover .play_info {
+.players .player_item:hover .play_info {
   bottom: -85px;
   background-color: rgba(0, 0, 0, 0.4);
 }
 /* chỉ box HLV */
-.player_item:hover .play_info.coaching {
+.players .player_item:hover .play_info.coaching {
   bottom: -35px;
   background-color: rgba(0, 0, 0, 0.4);
+}
+
+/*================= Cầu thủ huyền thoại =================*/
+.legendary {
+  padding-bottom: 70px;
+  background-color: #181733;
+}
+
+.legendary .legendary_top {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../img/legendary_title-background.jpg);
+  background-position: top;
+  width: 100%;
+  height: 20vh;
+}
+.legendary .legendary_title {
+  color: #fff;
+  height: 100%;
+  text-shadow: 0 0 10px var(--main-color), 0 0 20px var(--main-color),
+    0 0 40px var(--main-color), 0 0 80px var(--main-color);
+  text-transform: uppercase;
+  padding: 70px 0 10px 0;
+  font-family: "Oswald";
+  font-size: 3.5rem;
+  text-align: center;
+  font-weight: bold;
+  background-color: rgba(59, 51, 90, 0.6);
+  letter-spacing: 2px;
+}
+/* Danh sách các cầu thủ huyền thoại */
+.legendary .legendary_list {
+  padding-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 2%;
+}
+
+.legendary .legendary_item {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25vw;
+  height: 50vh;
+  position: relative;
+}
+
+.legendary .legendary_img {
+  position: absolute; /*định vị vị trí theo "legendary_item" */
+  top: 20%;
+  width: 90%;
+  height: 60%;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #fff;
+  z-index: 1;
+  transition: all 0.5s ease;
+}
+/* Video */
+.legendary_video-overlay {
+  display: none;
+  position: absolute; /*định vị vị trí theo "legendary_item" */
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 20%;
+  width: 90%;
+  height: 60%;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: all 0.5s ease;
+}
+.legendary_video-overlay.active {
+  display: flex;
+}
+.legendary_video {
+  border: 2px solid #fff;
+  width: 90%;
+  border-radius: 8px;
+}
+.close_btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.legendary .legendary_info {
+  border-radius: 10px;
+  width: 100%;
+  height: 70%;
+  overflow: hidden;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute; /*định vị vị trí theo "legendary_item" */
+  bottom: 0;
+}
+/* TÊN */
+.legendary .legendary_name {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+  position: absolute; /*Định vị theo vị trí của "legendary_info"*/
+  bottom: 10%;
+  transition: all 0.5s ease;
+}
+
+.legendary .first_name {
+  font-size: 1.3rem;
+  font-weight: 200;
+  color: #680317;
+  font-family: "roboto slab";
+  line-height: 1;
+}
+
+.legendary .last_name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "roboto slab";
+  color: #06063b;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+/* Thông tin khác */
+.legendary .info-box {
+  position: absolute; /*Định vị theo vị trí của "legendary_info*/
+  bottom: -100%;
+  transition: all 0.5s ease;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+/* Vị trí sở trường */
+.legendary .info-position {
+  letter-spacing: 0.5px;
+  font-family: "Oswald";
+  color: #06063b;
+  background: linear-gradient(121deg, rgb(119, 6, 6) 0%, rgb(4, 12, 131) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+/* Thời gian gắn bó */
+.legendary .info-time {
+  font-family: "sora";
+  font-weight: 100;
+  font-size: 1rem;
+}
+
+/* Thành tích cá nhân */
+.legendary .trophy_box {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+  padding: 5px 0;
+  border-radius: 5px;
+}
+
+/* Số bàn thắng */
+.legendary .trophy_goal {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+.legendary .trophy_goal-text {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-family: "roboto slab";
+  font-weight: bold;
+  color: #002795;
+  letter-spacing: 0.5px;
+}
+.legendary .trophy_goal-number {
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #c20000;
+}
+
+/* Số cúp */
+.legendary .trophy_cup-list {
+  background-color: #ffd154;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.legendary .trophy_cup-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  padding: 5px;
+}
+.legendary .trophy_img {
+  width: 70%;
+}
+.legendary .trophy_number {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.legendary .info_bottom {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+/* Quốc kỳ */
+.legendary .info_country {
+  width: 20%;
+}
+/* button */
+.legendary .video_btn {
+  width: 60%;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 5px;
+  border: 2px solid var(--main-color);
+  background-color: transparent;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+}
+.legendary .btn_text {
+  font-size: 1rem;
+  font-family: "roboto slab";
+  font-weight: bold;
+  color: var(--main-color);
+  transition: all 0.5s ease;
+}
+
+.legendary .btn_icon {
+  width: 10%;
+  color: var(--main-color);
+  transition: all 0.5s ease;
+}
+
+/* Hiệu ứng */
+.legendary_item:hover .legendary_img {
+  top: -25%;
+}
+.legendary_item:hover .legendary_name {
+  bottom: 80%;
+}
+.legendary_item:hover .info-box {
+  bottom: 0;
+}
+.video_btn:hover {
+  background-color: var(--main-color);
+}
+.video_btn:hover .btn_text {
+  color: #fff;
+}
+.video_btn:hover .btn_icon {
+  color: #fff;
+  transform: scale(1.5);
+}
+
+.legendary_item:hover .legendary_video-overlay {
+  top: -25%;
+}
+
+/*================= Link all các huyền thoại =================*/
+.legendary .legendary_all-link {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.legendary .cta_legendary-link {
+  position: relative;
+  margin-right: 5vw;
+  font-size: 1.5rem;
+  font-family: "roboto slab";
+  color: #fff;
+  transition: all 0.5s ease;
+}
+
+.cta_legendary-link::before {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  content: "";
+  display: block;
+  width: 0%;
+  height: 3px;
+  transition: all 0.5s ease;
+}
+.cta_legendary-link::after {
+  position: absolute;
+  top: 28px;
+  right: 100%;
+  content: "";
+  opacity: 0;
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  border-left: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  transform: rotate(225deg);
+  transition: all 0.5s ease;
+}
+/* Hiệu ứng */
+.cta_legendary-link:hover {
+  color: #fff;
+  text-shadow: 0 0 10px var(--main-color), 0 0 10px var(--main-color),
+    0 0 10px var(--main-color), 0 0 10px var(--main-color);
+}
+
+.cta_legendary-link:hover::before {
+  width: 110%;
+  background-color: var(--main-color);
+}
+.cta_legendary-link:hover::after {
+  opacity: 1;
+  right: -15%;
+  border-left: 3px solid var(--main-color);
+  border-bottom: 3px solid var(--main-color);
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  background-color: #0a0927;
+  box-shadow: -3px -24px 30px 0px #0a0927, 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+.footer-inner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Footer Left */
+.footer-follow {
+  width: 30%;
+}
+
+.footer-follow__wrap {
+  margin: 100px 0;
+  padding: 20px 10px;
+}
+
+.footer-follow__logo {
+}
+
+.footer-logo__img {
+  width: 20%;
+  transition: all 0.3s ease;
+}
+
+.footer-logo__text {
+  margin-top: 10px;
+  font-size: 1.6rem;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* HIỆU ỨNG HOVER VÀO LOGO */
+.footer-follow__logo:hover .footer-logo__img {
+  filter: drop-shadow(-1px 3px 5px var(--main-color));
+}
+.footer-follow__logo:hover .footer-logo__text {
+  text-shadow: 0 0 10px var(--main-color), 0 0 20px var(--main-color),
+    0 0 40px var(--main-color), 0 0 80px var(--main-color);
+}
+
+/* FORM */
+.footer-follow__form {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-form__input {
+  background: #fff;
+  width: 70%;
+  height: 46px;
+  border-radius: 23px;
+  border: 1px solid rgba(255, 91, 46, 0.25);
+  opacity: 0.6;
+  padding-left: 22px;
+}
+
+.footer-form__input::placeholder {
+  color: #656689;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.16;
+}
+
+.footer-form__btn {
+  margin-left: 10px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: none;
+  opacity: 0.7;
+  transition: all 0.5s ease;
+}
+
+.footer-form__btn:hover {
+  opacity: 1;
+}
+
+.footer-form__btn--icon {
+  transition: all 0.5s ease;
+  color: #656689;
+  width: 10px;
+}
+
+.footer-form__btn:hover .footer-form__btn--icon {
+  transform: scale(2);
+  color: #9b0041;
+}
+
+/* SOCIAL */
+.social__heading {
+  margin-top: 68px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.11;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.social__list {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.social__list a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.social__link {
+  transition: transform 0.5s ease;
+}
+
+.social__list a:hover .social__link {
+  transform: scale(1.5);
+}
+
+.copyright {
+  margin-top: 20px;
+  color: #333;
+}
+
+/* Footer Right */
+
+.footer-info {
+  width: 50%;
+}
+.footer-info__list {
+  display: grid;
+  grid-template-columns: 40% 40%;
+  grid-row: auto auto;
+  gap: 10%;
+}
+
+.footer-item__heading,
+.footer-item__link {
+  display: block;
+  color: #fff;
+}
+
+.footer-item__heading {
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  color: var(--main-color);
+}
+
+.footer-item__link {
+  padding: 10px 20px 10px 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+.footer-item__link:hover {
+  transform: translateX(10px);
 }
