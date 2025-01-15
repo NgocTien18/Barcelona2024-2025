@@ -169,7 +169,10 @@ body {
     )
     1;
 }
-
+/* Ẩn mobile-menu */
+.mobile-header {
+  display: none;
+}
 .nav-list {
   width: 50%;
   margin-left: auto;
@@ -288,7 +291,6 @@ body {
 
 .slider-section {
   width: 100%;
-  height: calc(100vh - 10vh);
   overflow: hidden;
   position: relative;
   border-bottom: 10px solid;
@@ -340,11 +342,11 @@ body {
 
 .info-img {
   width: 40%;
+  object-fit: cover;
 }
 
 .info-list {
   width: 40%;
-  object-fit: cover;
 }
 
 .stadium-img {
@@ -352,7 +354,15 @@ body {
 }
 
 .info-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   margin: 20px 0;
+}
+
+.info-item b {
+  white-space: nowrap;
 }
 
 .info-item audio {

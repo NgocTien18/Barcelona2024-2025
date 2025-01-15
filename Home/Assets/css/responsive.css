@@ -1,0 +1,146 @@
+/* PC */
+@media screen and (min-width: 992px) {
+}
+
+/* Tablet & Mobile */
+@media screen and (max-width: 991px) {
+  /* Header */
+  .header-container .logo {
+    width: 50px;
+    top: -50px;
+  }
+
+  .header-container .logo-text {
+    display: none;
+  }
+
+  .nav-container .nav-list {
+    width: 100%;
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+  /* header */
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: 70px;
+  }
+  .header-container .search-container {
+    display: none;
+  }
+  .header-container .login {
+    /* display: none; */
+  }
+  .header-container .header-logo {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+  }
+  .header-logo .logo {
+    position: static;
+  }
+  .header-logo .logo-text {
+    display: block;
+    position: static;
+  }
+
+  /* mennu */
+  .nav-list .nav-item {
+    font-size: 0.5rem;
+    white-space: nowrap;
+  }
+  .nav-list .nav-item__icon {
+    left: 5px;
+    bottom: 2px;
+  }
+
+  /* ================= MAIN ================= */
+  .greeting-marquee {
+    font-size: 2rem;
+    letter-spacing: 3px;
+  }
+
+  /* INFO */
+  .info-container {
+    border-radius: 10px;
+  }
+  .info-clb,
+  .info-stadium {
+    padding: 0;
+  }
+  .info-item {
+    font-size: 1.5vw;
+  }
+  .info-item audio {
+    width: 100%;
+    height: 20px;
+  }
+
+  /* TROPHIES */
+  .trophies {
+    padding: 10px 0;
+  }
+
+  .trophies-body {
+    gap: 10px;
+  }
+
+  .trophies-name {
+    font-size: 10px;
+  }
+  .trophies-info__name {
+    font-size: 10px;
+  }
+  .trophies-quantity {
+    font-size: 1em;
+  }
+  .trophies-year {
+    font-size: 0.2em;
+  }
+
+  /* ================= Footer ================= */
+  .footer-logo__img {
+    width: 40%;
+  }
+  .footer-logo__text {
+    margin-top: 0;
+    font-size: 3vw;
+  }
+  .footer-follow__form {
+    display: none;
+  }
+
+  .social__heading {
+    font-size: 3vw;
+  }
+
+  .social__list {
+    gap: 5px;
+  }
+
+  .social__list a {
+    padding: 5px;
+    width: 10vw;
+    border-radius: 10px;
+  }
+
+  .copyright_text {
+    font-size: 2vw;
+  }
+
+  .footer-info {
+    overflow: hidden;
+  }
+
+  .footer-info__list {
+    font-size: 2vw;
+  }
+}
