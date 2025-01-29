@@ -17,6 +17,8 @@
   .nav-container .nav-list {
     width: 100%;
   }
+
+  /* Main */
 }
 
 /* Mobile */
@@ -31,9 +33,7 @@
   .header-container .search-container {
     display: none;
   }
-  .header-container .login {
-    /* display: none; */
-  }
+
   .header-container .header-logo {
     display: flex;
     justify-content: center;

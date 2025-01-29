@@ -34,5 +34,5 @@ function startCountdown(targetDate) {
 }
 
 // Set target date (e.g., 31st Dec 2024)
-const targetDate = new Date("2025-01-18T00:00:00").getTime();
+const targetDate = new Date("2025-03-31T00:00:00").getTime();
 startCountdown(targetDate);
